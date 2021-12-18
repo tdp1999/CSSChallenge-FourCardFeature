@@ -1,45 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Four card feature section</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    <title>Four Card Feature Section</title>
+    <style>
+        /*Primary
+            Red: hsl(0, 78%, 62%) EA5353FF
+            Cyan: hsl(180, 62%, 55%) 45D3D3FF
+            Orange: hsl(34, 97%, 64%) FCAF4AFF
+            Blue: hsl(212, 86%, 64%) 549EF2FF
+            Neutral
+            Very Dark Blue: hsl(234, 12%, 34%) 4C4E61FF
+            Grayish Blue: hsl(229, 6%, 66%) A3A5AEFF
+            Very Light Gray: hsl(0, 0%, 98%) FAFAFAFF
+        */
+        body {
+            height: 100%;
+            font-size: 16px;
+            font-family: 'Poppins', sans-serif;
+        }
+        .custom-card {
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+        }
+    </style>
 </head>
 <body>
-  
-  Reliable, efficient delivery
-  Powered by Technology
-
-  Our Artificial Intelligence powered tools use millions of project data points 
-  to ensure that your project is successful
-
-  Supervisor
-  Monitors activity to identify project roadblocks
-
-  Team Builder
-  Scans our talent network to create the optimal team for your project
-
-  Karma
-  Regularly evaluates our talent to ensure quality
-
-  Calculator
-  Uses data from past projects to provide better delivery estimates
-
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
+<div class="h-full min-h-screen flex flex-col justify-center items-center bg-[#FAFAFAFF] p-8">
+    <div class="text-center mb-12">
+        <h2 class="text-2xl lg:text-4xl font-extralight text-[#A3A5AEFF]">Reliable, efficient delivery</h2>
+        <h2 class="text-2xl lg:text-4xl font-semibold text-[#4C4E61FF] mb-4">Powered by Technology</h2>
+        <div class="lg:max-w-[500px] text-sm text-[#A3A5AEFF]">Our Artificial Intelligence powered tools use millions of project data points to ensure that your project is successful</div>
+    </div>
+    <div class="lg:flex lg:justify-center mb-5 w-full">
+        <div class=" lg:max-w-[300px] custom-card rounded-lg p-8 mb-5 lg:mb-0 lg:mr-5 relative border-solid border-t-[3px] border-[#45D3D3FF] lg:translate-y-1/2">
+            <h3 class="text-lg font-semibold mb-2">Supervisor</h3>
+            <div class="mb-4 text-xs text-[#A3A5AEFF]">Monitors activity to identify project roadblocks</div>
+            <img src="images/icon-supervisor.svg" alt="icon-supervisor" class="ml-auto block">
+        </div>
+        <div class=" lg:max-w-[300px] custom-card rounded-lg p-8 mb-5 lg:mb-0 lg:mr-5 border-solid border-t-[3px] border-[#EA5353FF]">
+            <h3 class="text-lg font-semibold mb-2">Team Builder</h3>
+            <div class="mb-4 text-xs text-[#A3A5AEFF]">Scans our talent network to create the optimal team for your project</div>
+            <img src="images/icon-team-builder.svg" alt="icon-team-builder" class="ml-auto block">
+        </div>
+        <div class=" lg:max-w-[300px] custom-card rounded-lg p-8 border-solid border-t-[3px] border-[#549EF2FF] lg:translate-y-1/2">
+            <h3 class="text-lg font-semibold mb-2">Calculator</h3>
+            <div class="mb-4 text-xs text-[#A3A5AEFF]">Uses data from past projects to provide better delivery estimates</div>
+            <img src="images/icon-calculator.svg" alt="icon-calculator" class="ml-auto block">
+        </div>
+    </div>
+    <div class=" w-full lg:max-w-[300px] custom-card rounded-lg p-8 border-solid border-t-[3px] border-[#FCAF4AFF]">
+        <h3 class="text-lg font-semibold mb-2">Karma</h3>
+        <div class="mb-4 text-xs text-[#A3A5AEFF]">Regularly evaluates our talent to ensure quality</div>
+        <img src="images/icon-karma.svg" alt="icon-karma" class="ml-auto block">
+    </div>
+</div>
 </body>
 </html>
